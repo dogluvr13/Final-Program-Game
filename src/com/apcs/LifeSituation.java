@@ -1,12 +1,12 @@
-package com.richa;
+package com.apcs;
 
 import java.util.Scanner;
 
-import javax.swing.*;
-
-public class Main {
+public class LifeSituation {
 
     public static void main(String[] args) {
+
+        int userChoice = 0;
 
         while (true) {
 
@@ -18,37 +18,48 @@ public class Main {
             System.out.print("Choice: ");
 
             Scanner scanner = new Scanner(System.in);
-            int userChoice = scanner.nextInt();
 
-            if (userChoice >= 1 && userChoice <= 4) {
+            try {
 
-                System.out.println("Excellent! Now, it's time to name you and your crew.");
+                userChoice = scanner.nextInt();
+                scanner.nextLine();
 
-                System.out.print("1) ");
-                String name1 = scanner.next();
+            } catch (Exception e) {
 
-                System.out.print("2) ");
-                String name2 = scanner.next();
-
-                System.out.print("3) ");
-                String name3 = scanner.next();
-
-                System.out.print("4) ");
-                String name4 = scanner.next();
-
-                System.out.print("5) ");
-                String name5 = scanner.next();
-
-                break;
-
-            } else {
-
-                System.out.println("That's not a choice. Let's try this again... ");
+                System.out.println("Bad input. Please enter a number between 1 and 4.");
                 System.out.println("");
+                continue;
 
             }
+
+            if (userChoice < 1 || userChoice > 4) {
+
+                System.out.println("Bad input. Please enter a number between 1 and 4.");
+                System.out.println("");
+                continue;
+
+            }
+
+
+        }
+
+        if (userChoice == 1) {
+
+
+
+        } else if (userChoice == 2) {
+
+
+
+        } else if (userChoice == 3) {
+
+
+
+        } else if (userChoice == 4) {
+
 
         }
 
     }
+
 }
