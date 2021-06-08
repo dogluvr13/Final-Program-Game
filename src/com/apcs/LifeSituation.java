@@ -8,10 +8,11 @@ public class LifeSituation {
 
         int userChoice = 0;
 
+
         while (true) {
 
             System.out.println("Your life situation impacts the resources you can start with!\nAn easier life will give you more resources to begin with, but your final score will have a lower multiplier added on.");
-            System.out.println("1) Olympian - With infinite resources, your life is off to an easy start. ");
+            System.out.println("1) Olympian - With near infinite resources, your life is off to an easy start. ");
             System.out.println("2) High Royalty - As part of the ancient royal courts, you've got quite the budget. ");
             System.out.println("3) Weaver - Average income, average life. ");
             System.out.println("4) Public servant - You don't have much to start with, but hopefully this journey can change that. ");

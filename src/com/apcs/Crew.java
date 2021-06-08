@@ -1,23 +1,35 @@
 package com.apcs;
+import java.util.Scanner;
 
 public class Crew {
 
-    private String name = null;
+    public void nameCrew() {
 
-    public Crew() {
+        CrewEdits crew = new CrewEdits();
+        System.out.println("Now, name your crew. ");
 
-    }
+        Scanner scanner = new Scanner(System.in);
 
-    public Crew(String name) {
-        this.name = name;
-    }
+        System.out.print("1) ");
+        String name1 = scanner.nextLine();
+        crew.addCrewMember(name1);
 
-    public String getName() {
-        return name;
-    }
+        System.out.print("2) ");
+        String name2 = scanner.nextLine();
+        crew.addCrewMember(name2);
 
-    public void setName(String name) {
-        this.name = name;
+        System.out.print("3) ");
+        String name3 = scanner.nextLine();
+        crew.addCrewMember(name3);
+
+        System.out.print("4) ");
+        String name4 = scanner.next();
+        crew.addCrewMember(name4);
+
+        System.out.print("5) ");
+        String name5 = scanner.next();
+        crew.addCrewMember(name5);
+
     }
 
 }
