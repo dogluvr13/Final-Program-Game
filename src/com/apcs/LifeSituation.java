@@ -43,22 +43,6 @@ public class LifeSituation {
 
         }
 
-        if (userChoice == 1) {
-
-
-
-        } else if (userChoice == 2) {
-
-
-
-        } else if (userChoice == 3) {
-
-
-
-        } else if (userChoice == 4) {
-
-
-        }
 
     }
 
