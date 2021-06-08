@@ -1,11 +1,11 @@
-package com.apcs;
+/*package com.apcs;
 
 
 public class Encounters {
 
     public int randomEncounter() {
 
-        CrewEdits crew = new CrewEdits();
+        Crew crew = new Crew();
         int crewCounter = crew.size();
         int turnCounter = 0;
         int encounter = 0;
@@ -162,3 +162,5 @@ public class Encounters {
     }
 
 }
+
+ */

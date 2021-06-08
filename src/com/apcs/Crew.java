@@ -1,11 +1,32 @@
 package com.apcs;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Crew {
 
-    public void nameCrew() {
+    private ArrayList<String> crew = new ArrayList<String>();
 
-        CrewEdits crew = new CrewEdits();
+    public void addCrewMember(String name) {
+
+        String crewMember = new String(name);
+        crew.add(crewMember);
+
+    }
+
+    public void killCrewMember() {
+
+        if (crew.size() > 0) {
+
+            crew.remove(crew.size() - 1);
+
+        }
+
+    }
+
+
+    public static void main(String[] args) {
+
+        Crew crew = new Crew();
         System.out.println("Now, name your crew. ");
 
         Scanner scanner = new Scanner(System.in);
@@ -29,6 +50,12 @@ public class Crew {
         System.out.print("5) ");
         String name5 = scanner.next();
         crew.addCrewMember(name5);
+
+    }
+
+    public int getCount() {
+
+        return crew.size();
 
     }
 
