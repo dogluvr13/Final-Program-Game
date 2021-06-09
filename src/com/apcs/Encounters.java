@@ -1,31 +1,36 @@
-/*package com.apcs;
-
+package com.apcs;
 
 public class Encounters {
 
-    public int randomEncounter() {
+    Crew crew = new Crew();
+    LifeSituation ls = new LifeSituation();
+    private int money = 0;
+    private int crewCounter = crew.getCount();
+    private int turnCounter = 0;
+    private int sails = 1;
+    private int earbuds = 1;
+    private int ambrosia = 1;
+    private int bandages = 1;
+    private boolean pegasus = true;
+    private boolean threeHeadedDog = true;
+    private boolean phoenix = true;
 
-        Crew crew = new Crew();
-        int crewCounter = crew.size();
-        int turnCounter = 0;
-        int encounter = 0;
-        int money = 0;
+    public int randomEncounter(int encounter) {
 
         if (encounter == 1) {
 
             System.out.println("Your crew has incurred the wrath of Lord Poseidon and is caught in a storm. One crew member has died. ");
             crew.killCrewMember();
-            crewCounter = crew.size();
             turnCounter = turnCounter + 1;
 
         } else if (encounter == 2) {
 
             System.out.println("Your crew has incurred the wrath of Lord Poseidon and is caught in a storm.");
 
-            if (sails = true) {
+            if (sails > 0) {
 
                 System.out.println("Thank the gods you purchased those SAILS before! Your entire crew has survived.");
-                sails =-;
+                sails = sails - 1;
 
             } else {
 
@@ -39,10 +44,10 @@ public class Encounters {
 
             System.out.println("Your crew has encroached onto siren territory.");
 
-            if (earbuds = true) {
+            if (earbuds > 0) {
 
                 System.out.println("Thank the gods you purchased those EARBUDS before! Your entire crew has survived.");
-                earbuds =-;
+                earbuds = earbuds - 1;
 
             } else {
 
@@ -59,8 +64,8 @@ public class Encounters {
 
         } else if (encounter == 5) {
 
-            System.out.println("A crew member got greedy with the ambrosia supply, spoiling and eating half of your supply. One crew member has died.");
-            ambrosia/2 = ambrosia;
+            System.out.println("A crew member got greedy with the ambrosia supply, spoiling and eating a major portion of your supply. One crew member has died and half of your ambrosia supply is gone.");
+            ambrosia = ambrosia/2;
             turnCounter = turnCounter + 1;
 
         } else if (encounter == 6) {
@@ -89,10 +94,10 @@ public class Encounters {
 
             System.out.println("A monster has attacked you and your crew.");
 
-            if (bandages = true) {
+            if (bandages > 0) {
 
                 System.out.println("Thank the gods you purchased those BANDAGES before! Your entire crew has survived.");
-                bandages =-;
+                bandages = bandages - 1;
 
             } else {
 
@@ -106,7 +111,7 @@ public class Encounters {
 
             System.out.println("It's a foggy day.");
 
-            if (pegasus = true) {
+            if (pegasus == true) {
 
                 System.out.println("If you have a PEGASUS, you can travel safely ONE extra turn with no consequences.");
                 turnCounter = turnCounter + 1;
@@ -122,14 +127,14 @@ public class Encounters {
 
             System.out.println("The kerkopes have stolen away on your ship, looking to steal some of your riches.");
 
-            if (threeHeadedDog = true) {
+            if (threeHeadedDog == true) {
 
                 System.out.println("If you have a THREE-HEADED DOG, your money is safe! Nothing out of the ordinary happens");
 
             } else {
 
                 System.out.println("The brothers get into your money stash and are gone by the morning. Lose 50 drachmas.  ");
-                money = money - 50;
+                money = ls.getMoney() - 50;
             }
             turnCounter = turnCounter + 1;
 
@@ -137,7 +142,7 @@ public class Encounters {
 
             System.out.println("A crew member has fallen extremely ill and they most likely won't make it. ");
 
-            if (phoenix = true) {
+            if (phoenix == true) {
 
                 System.out.println("If you have a PHOENIX, you can use the Phoenix tears to save their life. Nothing out of the ordinary happens. ");
 
@@ -159,8 +164,10 @@ public class Encounters {
 
         }
 
+        return encounter;
+
     }
 
 }
 
- */
+
