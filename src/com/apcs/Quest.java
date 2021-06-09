@@ -4,9 +4,51 @@ public class Quest {
 
    private LifeSituation lifeSituation = new LifeSituation();
    private Crew crew = new Crew();
+   private Shop shop = new Shop();
    private Encounters encounters = new Encounters();
+   private int turnCounter = 0;
 
-   void welcomeScreen() {
+    public LifeSituation getLifeSituation() {
+        return lifeSituation;
+    }
+
+    public void setLifeSituation(LifeSituation lifeSituation) {
+        this.lifeSituation = lifeSituation;
+    }
+
+    public Crew getCrew() {
+        return crew;
+    }
+
+    public void setCrew(Crew crew) {
+        this.crew = crew;
+    }
+
+    public Shop getShop() {
+        return shop;
+    }
+
+    public void setShop(Shop shop) {
+        this.shop = shop;
+    }
+
+    public Encounters getEncounters() {
+        return encounters;
+    }
+
+    public void setEncounters(Encounters encounters) {
+        this.encounters = encounters;
+    }
+
+    public int getTurnCounter() {
+        return turnCounter;
+    }
+
+    public void setTurnCounter(int turnCounter) {
+        this.turnCounter = turnCounter;
+    }
+
+    void welcomeScreen() {
 
        System.out.println("QUEST");
        System.out.println("A game by Richa Juvekar and Tanya Vasireddy.");
@@ -20,8 +62,19 @@ public class Quest {
        lifeSituation.chooseLife();
        crew.chooseCrew();
        // shop option here
+       // ready to begin game message (press enter)
        System.out.println("");
-       encounters.randomEncounter(Utilities.randomCalc());
+       encounters.randomEncounter(this);
+       // encounter 2
+       // circe's island
+       // encounter 3
+       // encounter 4
+       // straits decision
+       // encounter 5
+       // encounter 6
+       // final cyclops island
+       // score calculation/congrats
+
 
    }
 
