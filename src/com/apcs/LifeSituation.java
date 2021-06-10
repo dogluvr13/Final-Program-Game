@@ -41,10 +41,10 @@ public class LifeSituation {
         while (true) {
             System.out.println("");
             System.out.println("Your life situation impacts the resources you can start with!\nAn easier life will give you more resources to begin with, but your final score will have a lower multiplier added on.");
-            System.out.println("1) Olympian - With near infinite resources, your life is off to an easy start. ");
-            System.out.println("2) High Royalty - As part of the ancient royal courts, you've got quite the budget. ");
-            System.out.println("3) Weaver - Average income, average life. ");
-            System.out.println("4) Public servant - You don't have much to start with, but hopefully this journey can change that. ");
+            System.out.println("1) Olympian - With near infinite resources, your life is off to an easy start (100000 drachmas, x1 multiplier). ");
+            System.out.println("2) High Royalty - As part of the ancient royal courts, you've got quite the budget (1000 drachmas, x10 multiplier). ");
+            System.out.println("3) Weaver - Average income, average life (500 drachmas, x100 multiplier). ");
+            System.out.println("4) Public servant - You don't have much to start with, but hopefully this journey can change that (250 drachmas, x1000 multiplier). ");
             System.out.print("Choice: ");
 
             Scanner scanner = new Scanner(System.in);
@@ -62,7 +62,6 @@ public class LifeSituation {
 
             }
 
-            //TODO: set up the user choices + make the error condition the else
             if (userChoice == 1) {
 
                 lifeChoice = "Olympian";

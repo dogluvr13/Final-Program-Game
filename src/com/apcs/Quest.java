@@ -62,17 +62,29 @@ public class Quest {
        lifeSituation.chooseLife();
        crew.chooseCrew();
        // shop option here
-       // ready to begin game message (press enter)
-       System.out.println("");
+       Utilities.readyMessage();
        encounters.randomEncounter(this);
-       // encounter 2
+       Utilities.pressEnterToContinue();
+       encounters.randomEncounter(this);
+       Utilities.pressEnterToContinue();
+       encounters.randomEncounter(this);
+       Utilities.pressEnterToContinue();
        // circe's island
-       // encounter 3
-       // encounter 4
+       encounters.randomEncounter(this);
+       Utilities.pressEnterToContinue();
+       encounters.randomEncounter(this);
+       Utilities.pressEnterToContinue();
+       encounters.randomEncounter(this);
+       Utilities.pressEnterToContinue();
        // straits decision
-       // encounter 5
-       // encounter 6
+       encounters.randomEncounter(this);
+       Utilities.pressEnterToContinue();
+       encounters.randomEncounter(this);
+       Utilities.pressEnterToContinue();
+       encounters.randomEncounter(this);
+       Utilities.pressEnterToContinue();
        // final cyclops island
+       Utilities.scoreCalc(this);
        // score calculation/congrats
 
 
