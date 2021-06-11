@@ -6,6 +6,7 @@ public class Quest {
    private Crew crew = new Crew();
    private Shop shop = new Shop();
    private Encounters encounters = new Encounters();
+   private MajorEncounters mEncounters = new MajorEncounters();
    private int turnCounter = 0;
 
     public LifeSituation getLifeSituation() {
@@ -67,26 +68,18 @@ public class Quest {
        Utilities.pressEnterToContinue();
        encounters.randomEncounter(this);
        Utilities.pressEnterToContinue();
-       encounters.randomEncounter(this);
-       Utilities.pressEnterToContinue();
-       // circe's island
-       encounters.randomEncounter(this);
-       Utilities.pressEnterToContinue();
+       mEncounters.circeIsland();
        encounters.randomEncounter(this);
        Utilities.pressEnterToContinue();
        encounters.randomEncounter(this);
        Utilities.pressEnterToContinue();
-       // straits decision
+       mEncounters.monsterStraits();
        encounters.randomEncounter(this);
        Utilities.pressEnterToContinue();
        encounters.randomEncounter(this);
        Utilities.pressEnterToContinue();
-       encounters.randomEncounter(this);
-       Utilities.pressEnterToContinue();
-       // final cyclops island
+       mEncounters.cyclopsIsland();
        Utilities.scoreCalc(this);
-       // score calculation/congrats
-
 
    }
 

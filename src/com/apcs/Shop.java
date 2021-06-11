@@ -2,9 +2,9 @@ package com.apcs;
 
 public class Shop {
 
-    private int sails = 1;
+    private int sails = 5;
     private int earbuds = 1;
-    private int ambrosia = 1; // if food hits zero, they lose?
+    private int ambrosia = 8; // if food hits zero, they lose?
     private int bandages = 1;
     // can only buy one egg
     private boolean pegasus = true;

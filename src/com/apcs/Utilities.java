@@ -24,6 +24,13 @@ public class Utilities {
 
     }
 
+    public static int randomCalc2() {
+
+        int encounter = (int)(Math.floor(Math.random() * (2 - 1 + 1) + 1));
+        return encounter;
+
+    }
+
     public static void readyMessage() {
 
         int faqChoice = 0;
@@ -90,12 +97,16 @@ public class Utilities {
 
     }
 
-    public static int scoreCalc(Quest quest) {
+    public static void scoreCalc(Quest quest) {
 
         int finalScore = 0;
 
-        finalScore = quest.getLifeSituation().getMoney() * quest.getLifeSituation().getMultiplier();
-        return finalScore;
+        finalScore = (quest.getLifeSituation().getMoney() + (quest.getCrew().getCount() * 10)) * quest.getLifeSituation().getMultiplier();
+        System.out.println("CONGRATULATIONS! You completed your quest!");
+        System.out.println("You had " + quest.getLifeSituation().getMoney() + " drachmas remaining and " + quest.getCrew().getCount() +
+                " crew members alive. You also chose to live the life of a " + quest.getLifeSituation().getLifeChoice() + ", thus " +
+                "receiving a multiplier of " + quest.getLifeSituation().getMultiplier() + ", giving you a final score of...");
+        System.out.println(finalScore);
 
     }
 
