@@ -62,7 +62,7 @@ public class Quest {
        welcomeScreen();
        lifeSituation.chooseLife();
        crew.chooseCrew();
-       // shop option here
+       shop.shopDisplay(this);
        Utilities.readyMessage();
        encounters.randomEncounter(this);
        Utilities.pressEnterToContinue();
@@ -73,7 +73,7 @@ public class Quest {
        Utilities.pressEnterToContinue();
        encounters.randomEncounter(this);
        Utilities.pressEnterToContinue();
-       mEncounters.monsterStraits();
+       //mEncounters.monsterStraits();
        encounters.randomEncounter(this);
        Utilities.pressEnterToContinue();
        encounters.randomEncounter(this);

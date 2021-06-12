@@ -24,9 +24,9 @@ public class Utilities {
 
     }
 
-    public static int randomCalc2() {
+    public static int randomCalcStraits() {
 
-        int encounter = (int)(Math.floor(Math.random() * (2 - 1 + 1) + 1));
+        int encounter = (int)(Math.floor(Math.random() * (5 - 1 + 1) + 1));
         return encounter;
 
     }

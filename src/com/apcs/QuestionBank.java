@@ -52,4 +52,88 @@ public class QuestionBank {
 
     }
 
+    public void straitsQuestion() {
+
+        while (true) {
+
+            int userChoice3 = 0;
+
+            System.out.println("");
+            System.out.println("What will your decision be? ");
+            System.out.println("1) Scylla");
+            System.out.println("2) Charybdis ");
+            System.out.println("3) How many CREW MEMBERS do I have alive? ");
+            System.out.print("Choice: ");
+
+            Scanner scanner = new Scanner(System.in);
+
+            try {
+
+                userChoice3 = scanner.nextInt();
+                scanner.nextLine();
+
+            } catch (Exception e) {
+
+                System.out.println("Bad input. Please enter a number between 1 and 3.");
+                System.out.println("");
+
+            }
+
+            Quest quest = new Quest();
+            if (userChoice3 == 1) {
+
+                System.out.println("");
+                System.out.println("You chose to travel by Scylla. ");
+                quest.getCrew().killCrewMember();
+                quest.getCrew().killCrewMember();
+
+                if (quest.getCrew().getCount() == 0) {
+
+                    System.out.println("");
+                    System.out.println("Your entire crew has died! GAME OVER. ");
+                    System.exit(0);
+
+                } else {
+
+                    System.out.println("");
+                    System.out.println("Your crew managed to survive Scylla! ");
+                    break;
+
+                }
+
+            } else if (userChoice3 == 2) {
+
+                int decisionStraits = 0;
+
+                System.out.println("You chose to travel by Charybdis. ");
+                decisionStraits = Utilities.randomCalcStraits();
+
+                if (decisionStraits == 1 || decisionStraits == 2) {
+
+                    System.out.println("Your entire crew has died! GAME OVER. ");
+                    System.exit(0);
+
+                } else {
+
+                    System.out.println("Your crew managed to survive Charybdis! ");
+                    break;
+
+                }
+
+
+            } else if (userChoice3 == 3) {
+
+                System.out.println("You currently have " + quest.getCrew().getCount() + " surviving crew mates.");
+                Utilities.pressEnterToContinue();
+
+            } else {
+
+                System.out.println("Bad input. Please enter a number between 1 and 3.");
+                System.out.println("");
+
+            }
+
+
+        }
+    }
 }
