@@ -4,14 +4,13 @@ import java.util.Scanner;
 
 public class Shop {
 
-    private int sails = 5;
-    private int earbuds = 1;
-    private int ambrosia = 8; // if food hits zero, they lose?
-    private int bandages = 1;
-    // can only buy one egg
-    private boolean pegasus = true;
-    private boolean threeHeadedDog = true;
-    private boolean phoenix = true;
+    private int sails = 0;
+    private int earbuds = 0;
+    private int ambrosia = 0;
+    private int bandages = 0;
+    private boolean pegasus = false;
+    private boolean threeHeadedDog = false;
+    private boolean phoenix = false;
 
     public int getSails() {
         return sails;
@@ -122,6 +121,7 @@ public class Shop {
 
                 int moneySpent = numberBought * 10;
                 quest.getLifeSituation().setMoney(quest.getLifeSituation().getMoney() - moneySpent);
+                setAmbrosia(getAmbrosia() + numberBought);
 
                 if (quest.getLifeSituation().getMoney() < 0) {
 
@@ -151,6 +151,7 @@ public class Shop {
 
                 int moneySpent = numberBought * 50;
                 quest.getLifeSituation().setMoney(quest.getLifeSituation().getMoney() - moneySpent);
+                setSails(getSails() + numberBought);
 
                 if (quest.getLifeSituation().getMoney() < 0) {
 
@@ -180,6 +181,7 @@ public class Shop {
 
                 int moneySpent = numberBought * 15;
                 quest.getLifeSituation().setMoney(quest.getLifeSituation().getMoney() - moneySpent);
+                setEarbuds(getEarbuds() + numberBought);
 
                 if (quest.getLifeSituation().getMoney() < 0) {
 
@@ -209,6 +211,7 @@ public class Shop {
 
                 int moneySpent = numberBought * 25;
                 quest.getLifeSituation().setMoney(quest.getLifeSituation().getMoney() - moneySpent);
+                setBandages(getBandages() + numberBought);
 
                 if (quest.getLifeSituation().getMoney() < 0) {
 
@@ -232,6 +235,8 @@ public class Shop {
                     quest.getLifeSituation().setMoney(quest.getLifeSituation().getMoney() + moneySpent);
 
                 }
+
+                //pegasus true, phoenix true, dog true settings
 
                 Utilities.pressEnterToContinue();
 
