@@ -27,8 +27,8 @@ public class MajorEncounters {
         } else {
 
             System.out.println("You've arrived to the straits of Charybdis and Scylla. This narrow passage of water gives your crew" +
-                    " two options going forward.\n If you go by the path of Scylla, you will lose two crew mates, but otherwise your crew will be" +
-                    " safe. If you go by the path of Charybdis, you will have a good chance of your entire crew surviving, but your entire crew \n " +
+                    " two options going forward.\nIf you go by the path of Scylla, you will lose two crew mates, but otherwise your crew will be" +
+                    " safe. If you go by the path of Charybdis, you will have a good chance of your entire crew surviving, but your entire crew \n" +
                     " also has a chance to all die. ");
             Utilities.pressEnterToContinue();
             qB.straitsQuestion();

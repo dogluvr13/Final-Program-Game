@@ -84,7 +84,7 @@ public class Quest {
            Utilities.pressEnterToContinue();
 
        }
-       //mEncounters.monsterStraits();
+       mEncounters.monsterStraits(this);
        while (turnCounter < 10) {
 
            encounters.randomEncounter(this);
