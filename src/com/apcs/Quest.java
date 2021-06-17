@@ -51,7 +51,13 @@ public class Quest {
 
     void welcomeScreen() {
 
-       System.out.println("QUEST");
+       System.out.println("\n" +
+               "░██████╗░██╗░░░██╗███████╗░██████╗████████╗\n" +
+               "██╔═══██╗██║░░░██║██╔════╝██╔════╝╚══██╔══╝\n" +
+               "██║██╗██║██║░░░██║█████╗░░╚█████╗░░░░██║░░░\n" +
+               "╚██████╔╝██║░░░██║██╔══╝░░░╚═══██╗░░░██║░░░\n" +
+               "░╚═██╔═╝░╚██████╔╝███████╗██████╔╝░░░██║░░░\n" +
+               "░░░╚═╝░░░░╚═════╝░╚══════╝╚═════╝░░░░╚═╝░░░\n");
        System.out.println("A game by Richa Juvekar and Tanya Vasireddy.");
        Utilities.pressEnterToContinue();
 
