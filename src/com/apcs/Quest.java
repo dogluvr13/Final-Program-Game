@@ -64,20 +64,27 @@ public class Quest {
        crew.chooseCrew();
        shop.shopDisplay(this);
        Utilities.readyMessage();
-       encounters.randomEncounter(this);
-       Utilities.pressEnterToContinue();
-       encounters.randomEncounter(this);
-       Utilities.pressEnterToContinue();
+       while (turnCounter < 4) {
+
+           encounters.randomEncounter(this);
+           Utilities.pressEnterToContinue();
+
+       }
        mEncounters.circeIsland();
-       encounters.randomEncounter(this);
-       Utilities.pressEnterToContinue();
-       encounters.randomEncounter(this);
-       Utilities.pressEnterToContinue();
+       shop.shopDisplay(this);
+       while (turnCounter < 7) {
+
+           encounters.randomEncounter(this);
+           Utilities.pressEnterToContinue();
+
+       }
        //mEncounters.monsterStraits();
-       encounters.randomEncounter(this);
-       Utilities.pressEnterToContinue();
-       encounters.randomEncounter(this);
-       Utilities.pressEnterToContinue();
+       while (turnCounter < 10) {
+
+           encounters.randomEncounter(this);
+           Utilities.pressEnterToContinue();
+
+       }
        mEncounters.cyclopsIsland();
        Utilities.scoreCalc(this);
 

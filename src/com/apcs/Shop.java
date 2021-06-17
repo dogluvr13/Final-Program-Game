@@ -224,7 +224,7 @@ public class Shop {
 
             } else if (shopChoice == 5) {
 
-                System.out.println("You have purchased a mystery egg. You have received a " /* add code for random selection of animal */);
+                int animalNum = Utilities.randomAnimalCalc();
 
                 int moneySpent = 100;
                 quest.getLifeSituation().setMoney(quest.getLifeSituation().getMoney() - moneySpent);
@@ -234,15 +234,42 @@ public class Shop {
                     System.out.println("You don't have enough drachmas to purchase this.");
                     quest.getLifeSituation().setMoney(quest.getLifeSituation().getMoney() + moneySpent);
 
-                }
+                } else {
 
-                //pegasus true, phoenix true, dog true settings
+                    if (animalNum == 1) {
+
+                        String animal = "Pegasus";
+                        setPegasus(true);
+                        System.out.println("You have purchased a mystery egg. You have received a " + animal);
+
+
+                    } else if (animalNum == 2) {
+
+                        String animal = "Phoenix";
+                        setPhoenix(true);
+                        System.out.println("You have purchased a mystery egg. You have received a " + animal);
+
+
+                    } else if (animalNum == 3) {
+
+                        String animal = "Three Headed Dog";
+                        setThreeHeadedDog(true);
+                        System.out.println("You have purchased a mystery egg. You have received a " + animal);
+
+
+                    } else {
+
+                        System.out.println("The egg you purchased was a dupe! No special mythical asset. ");
+
+                    }
+
+                }
 
                 Utilities.pressEnterToContinue();
 
             } else if (shopChoice == 6) {
 
-                System.out.println("Ambrosia - Food supply to sustain your crew during their travels. It is recommended to buy at least 50 pounds of ambrosia for your journey.");
+                System.out.println("Ambrosia - Food supply to sustain your crew during their travels. It is recommended to buy at least 20 pounds of ambrosia for your journey.");
                 System.out.println("Sails - Useful in case of damages to your ship by storm. It is recommended to buy at least 2 spare sails for your journey.");
                 System.out.println("Earbuds - A strange purchase, but could prove useful against certain opponents in the future. It is recommended to buy at least 1 pair of earbuds for your journey.");
                 System.out.println("Bandages - Potentially life-savers for major injuries. It is recommended to buy about 2 pairs of bandages for your journey.");

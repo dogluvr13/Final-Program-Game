@@ -6,14 +6,19 @@ public class Encounters {
 
         int encounter = Utilities.randomCalc();
 
-        if (quest.getCrew().getCount() == 0) {
+        if (quest.getCrew().getCount() <= 0) {
 
             System.out.println("Your entire crew has died! GAME OVER. ");
             System.exit(0);
 
-        } else if (quest.getShop().getAmbrosia() == 0) {
+        } else if (quest.getShop().getAmbrosia() <= 0) {
 
             System.out.println("You have ran out of ambrosia to feed your crew! GAME OVER. ");
+            System.exit(0);
+
+        } else if (quest.getLifeSituation().getMoney() <= 0) {
+
+            System.out.println("You have run out of money, leaving your crew unable to continue going forward! GAME OVER. ");
             System.exit(0);
 
         } else {
@@ -66,6 +71,7 @@ public class Encounters {
             } else if (encounter == 5) {
 
                 System.out.println("A crew member got greedy with the ambrosia supply, spoiling and eating a major portion of your supply. One crew member has died and half of your ambrosia supply is gone.");
+                quest.getCrew().killCrewMember();
                 quest.getShop().setAmbrosia(quest.getShop().getAmbrosia() / 2);
                 quest.setTurnCounter(quest.getTurnCounter() + 1);
 

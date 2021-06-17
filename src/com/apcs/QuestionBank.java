@@ -136,4 +136,52 @@ public class QuestionBank {
 
         }
     }
+
+    public void finalQuestion() {
+
+        int question = 1;
+        int userChoice2 = 0;
+
+        if (question == 1) {
+
+            System.out.println("");
+            System.out.println("What gold-haired, winged animal provided the fleece of the Golden Fleece? ");
+            System.out.println("1) A ram");
+            System.out.println("2) A tiger ");
+            System.out.println("3) A wolf");
+            System.out.println("4) A pegasus ");
+
+            Scanner scanner = new Scanner(System.in);
+
+            try {
+
+                userChoice2 = scanner.nextInt();
+                scanner.nextLine();
+
+            } catch (Exception e) {
+
+                System.out.println("Bad input. Please enter a number between 1 and 4.");
+                System.out.println("");
+
+            }
+
+            if (userChoice2 == 1) {
+
+                System.out.println("Correct! You have defeated the Cyclops and can now take the Golden Fleece safely!");
+
+            } else {
+
+                System.out.println("Incorrect. Your crew has failed to fight the Cyclops, as it kills your remaining crew and ends your journey early. GAME OVER.");
+                System.exit(0);
+
+            }
+
+        } else {
+
+            System.out.println("Bad input. Please enter a number between 1 and 4.");
+
+        }
+
+
+    }
 }

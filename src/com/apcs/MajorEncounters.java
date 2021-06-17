@@ -40,7 +40,11 @@ public class MajorEncounters {
 
     public void cyclopsIsland() {
 
-
+        System.out.println("You've arrived to the final island, where you can retrieve the Golden Fleece. However, you find yourself fighting your final opponent: a Cyclops.");
+        System.out.println("If you answer the question correctly, your crew will be able to defeat the Cyclops and you can retrieve your prize. If not, your quest is as good as over.");
+        Utilities.pressEnterToContinue();
+        qB.finalQuestion();
+        Utilities.pressEnterToContinue();
 
     }
 

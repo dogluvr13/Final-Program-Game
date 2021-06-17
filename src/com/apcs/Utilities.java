@@ -110,4 +110,11 @@ public class Utilities {
 
     }
 
+    public static int randomAnimalCalc() {
+
+        int animal = (int)(Math.floor(Math.random() * (4 - 1 + 1) + 1));
+        return animal;
+
+    }
+
 }
