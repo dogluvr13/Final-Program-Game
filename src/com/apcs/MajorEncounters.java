@@ -18,7 +18,6 @@ public class MajorEncounters {
 
     public void monsterStraits(Quest quest) {
 
-        //TODO: this keeps saying everyone has died?
         if (quest.getCrew().getCount() == 0) {
 
             System.out.println("Your entire crew has died! GAME OVER. ");
@@ -31,7 +30,7 @@ public class MajorEncounters {
                     " safe. If you go by the path of Charybdis, you will have a good chance of your entire crew surviving, but your entire crew \n" +
                     " also has a chance to all die. ");
             Utilities.pressEnterToContinue();
-            qB.straitsQuestion();
+            qB.straitsQuestion(quest);
             Utilities.pressEnterToContinue();
 
         }

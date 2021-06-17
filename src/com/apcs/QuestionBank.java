@@ -52,7 +52,7 @@ public class QuestionBank {
 
     }
 
-    public void straitsQuestion() {
+    public void straitsQuestion(Quest quest) {
 
         while (true) {
 
@@ -79,7 +79,6 @@ public class QuestionBank {
 
             }
 
-            Quest quest = new Quest();
             if (userChoice3 == 1) {
 
                 System.out.println("");
